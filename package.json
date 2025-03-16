@@ -9,6 +9,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.4.3"
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/vercel": "^8.1.2",
+    "@fontsource-variable/onest": "^5.2.5",
+    "@fontsource/twinkle-star": "^5.2.5",
+    "@tailwindcss/vite": "^4.0.13",
+    "astro": "^5.4.3",
+    "tailwind": "^4.0.0",
+    "tailwindcss": "^4.0.13",
+    "typescript": "^5.8.2"
   }
 }

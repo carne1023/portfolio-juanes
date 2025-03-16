@@ -1,11 +1,67 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Badge from "@components/Badge.astro";
+import FirstCont from "@components/FirstCont.astro";
+
+import SocialPill from "@components/SocialPill.astro";
+import Layout from "@layouts/Layout.astro";
+import Github from "src/icons/Github.astro";
+import LinkedIn from "src/icons/LinkedIn.astro";
+import Mail from "src/icons/Mail.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <FirstCont />
+
+  <section
+    class="w-ful lg:w-[740px] mx-auto border-2 border-dashed rounded-lg p-5 text-center bg-purple-100 bg-gradient-to-r from-purple-150 to-purple-200"
+  >
+    <h1 class="font-bold text-5xl text-left pb-5 gap-x-4">
+      Hola, soy Juan <a
+        href="https://www.linkedin.com/in/quinones-juan/"
+        target="_blank"
+        rel="noopener"
+      >
+        <Badge />
+      </a>
+    </h1>
+    <h2 class="my-2 font-semibold">
+      Aprendiz de desarrollo web. Programador y entusiasta de la tecnología.
+      Colombiano de origen caleño.
+    </h2>
+    <p class="text-sm/7 text-left">
+      Un desarrollador junior o trainee en desarrollo web es un profesional en
+      etapa inicial de su carrera, con conocimientos básicos en tecnologías como
+      HTML, CSS y JavaScript, y en ocasiones, en frameworks y librerías como
+      React, Next.js, Astro o Svelte, así como en herramientas de estilización
+      como Tailwind CSS. Su enfoque principal es aprender y mejorar sus
+      habilidades mediante la práctica y la colaboración en proyectos bajo la
+      supervisión de desarrolladores más experimentados. Suelen trabajar en
+      tareas como corrección de errores, implementación de pequeñas
+      funcionalidades y adaptación de diseños, con el objetivo de adquirir
+      experiencia y crecer dentro del equipo de desarrollo.
+    </p>
+
+    <nav class="flex gap-x-2 mt-4">
+      <SocialPill href="https://www.linkedin.com/in/quinones-juan/">
+        <LinkedIn class="size-5" />
+        LinkedIn
+      </SocialPill>
+      <SocialPill href="https://github.com/carne1023">
+        <Github class="size-5" />
+        Github
+      </SocialPill>
+      <SocialPill href="mailto:juan.quinones08@usc.edu.co">
+        <Mail class="size-5" />
+        juan.quinones08@usc.edu.co
+      </SocialPill>
+    </nav>
+  </section>
 </Layout>
+
+<div
+  class="absolute top-0 z-[-2] h-screen w-screen rotate-180 transform bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]"
+>
+</div>
